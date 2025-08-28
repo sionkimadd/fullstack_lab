@@ -1,68 +1,177 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Colors */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --background-white: #ffffff;
+  --background-blue: #4973b6;
+  --button-blue: #4973b6;
+  --button-brown: #96877b;
+  --button-hover-brown: #96877b;
+  --button-hover-darkbrown: #685a50;
+  --text-black: #000000;
+  --text-white: #ffffff;
+  --black: #000000;
+  --brown: #96877b;
+  --blue: #4973b6;
+}
+
+/* Font styles */
+.inter-title {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.inter-subtitle {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.inter-main {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
-body {
+.inter-content {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.inter-thin {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 150;
+  font-style: normal;
+}
+
+/* Global styles */
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Landing page */
+.landing-page {
+  background: var(--background-white);
+  color: var(--text-black);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Header tsx */
+.landing-header {
+  text-align: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.landing-title {
+  font-size: 3rem;
+  margin-top: 6rem;
+  color: var(--blue);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.landing-subtitle {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: var(--brown);
+}
+
+.landing-main {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+/* NavBar tsx */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--background-white);
+  border-bottom: 3px solid var(--blue);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img {
+  height: 40px;
+  width: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-black);
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--button-blue);
+}
+
+/* Body tsx */
+.employee-directory {
+  padding: 2rem;
+  margin-top: 1rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.department {
+  border: 2px solid var(--blue);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  background: var(--background-white);
+}
+
+.department h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 0.5rem;
+}
+
+.department ul {
+  list-style: none;
+  padding: 0;
+}
+
+.department li {
+  padding: 0.5rem 0;
+  color: var(--text-black);
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--blue);
+}
+
+.department li:last-child {
+  border-bottom: none;
+}
+
+/* Footer tsx */
+.footer {
+  padding-bottom: 1rem;
+  text-align: center;
 }
