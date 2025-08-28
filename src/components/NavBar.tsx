@@ -3,16 +3,12 @@ import pixellLogo from "../assets/pixell-logo.png";
 export default function NavBar() {
     return (
         <div>
-            <nav>
+            <nav className="navbar inter-content">
                 <img src={pixellLogo} alt="Pixell Logo"/>
-                <div>
-                    <span>
-                        <a href="https://www.rrc.ca/">Employees</a>
-                    </span>
-                    <span>
-                        <a href="https://www.rrc.ca/">Organization</a>
-                    </span>
-                </div>
+                <ul>
+                    <li><a href="https://www.rrc.ca/">Employees</a></li>
+                    <li><a href="https://www.rrc.ca/">Organization</a></li>
+                </ul>
             </nav>
         </div>
     );

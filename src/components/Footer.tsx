@@ -3,7 +3,7 @@ export default function Footer() {
 
     return (
         <div>
-            <p>Copyright Pixell River Financial {currentYear}</p>
+            <p className="footer inter-thin">Copyright Pixell River Financial {currentYear}</p>
         </div>
     );
 }
