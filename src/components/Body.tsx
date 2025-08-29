@@ -1,6 +1,8 @@
-import employees from "../assets/employees.json";
+import useEmployees from "../hooks/useEmployees";
 
 export default function Body() {
+    const employees = useEmployees();
+
     return (
         <div>
             <main className="employee-directory">
