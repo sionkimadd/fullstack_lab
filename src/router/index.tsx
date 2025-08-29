@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "../pages/Landing";
+import Employees from "../pages/Employees";
+import Organization from "../pages/Organization";
 
 interface RouterConfig {
     path: string;
@@ -10,6 +12,14 @@ const routes = [
     {
         path: "/",
         element: <Landing />,
+    },
+    {
+        path: "/employees",
+        element: <Employees />,
+    },
+    {
+        path: "/organization",
+        element: <Organization />,
     },
 ]
 
